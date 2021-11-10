@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "index.html",
+    "currentPage": "nuestrosproductos.html",
     "theme": {
       "name": "petsm4",
       "title": "PetsM4",
@@ -2458,30 +2458,7 @@
                 "customStyleSale": "display-7",
                 "customStyleTags": "display-4",
                 "caption": "Type caption here",
-                "active": false,
-                "alt": "",
-                "title": ""
-              },
-              {
-                "tags": "Awesome",
-                "bestSeller": false,
-                "onSale": false,
-                "oldPrice": false,
-                "itemTitle": "Health Natural",
-                "itemDescription": "",
-                "itemPriceTitle": "From: ",
-                "itemPrice": "",
-                "oldPriceValue": "$34",
-                "sale": "-50%",
-                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
-                "image": "@PROJECT_PATH@/assets/images/p1040408-2000x2997.jpeg",
-                "thumb": "@PROJECT_PATH@/assets/images/p1040408-2000x2997-800x796.jpeg",
-                "customStyle5": "display-5",
-                "customStyle7": "display-7",
-                "customStyleSale": "display-7",
-                "customStyleTags": "display-4",
-                "caption": "Type caption here",
-                "active": false,
+                "active": true,
                 "alt": "",
                 "title": ""
               },
@@ -3309,7 +3286,7 @@
                 "customStyleSale": "display-7",
                 "customStyleTags": "display-4",
                 "caption": "Type caption here",
-                "active": true,
+                "active": false,
                 "alt": "",
                 "title": ""
               }
