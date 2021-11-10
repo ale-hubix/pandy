@@ -1,0 +1,3536 @@
+{
+  "settings": {
+    "currentPage": "index.html",
+    "theme": {
+      "name": "petsm4",
+      "title": "PetsM4",
+      "styling": {
+        "primaryColor": "#ed6436",
+        "secondaryColor": "#181818",
+        "successColor": "#F7ED4A",
+        "infoColor": "#82786E",
+        "warningColor": "#879A9F",
+        "dangerColor": "#B1A374",
+        "mainFont": "Nunito",
+        "display1Font": "Nunito",
+        "display1Size": 6,
+        "display2Font": "Nunito",
+        "display2Size": 3.6,
+        "display5Font": "Nunito",
+        "display5Size": 1.6,
+        "display7Font": "Nunito",
+        "display7Size": 1.2,
+        "display4Font": "Nunito",
+        "display4Size": 1,
+        "isRoundedButtons": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "titlePreset": "Pets Toys and Food Shop",
+      "nameSelectPreset": "shop",
+      "presetSourceTheme": "petsm4",
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "name": "pandy",
+    "versionFirst": "5.5.0",
+    "siteFonts": [
+      {
+        "css": "'Nunito', sans-serif",
+        "name": "Nunito",
+        "url": "https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      }
+    ],
+    "imageResize": true,
+    "chatbutton": {
+      "phone": "+56987280921",
+      "message": "",
+      "size": "65px",
+      "backgroundColor": "#e5ddd5",
+      "position": "left",
+      "popupMessage": "Hola!👋\n\nEscribenos aquí y recibiremos de inmediato tu inquietud",
+      "showPopup": true,
+      "showOnIE": true,
+      "autoOpenTimeout": "0",
+      "headerColor": "#39847a",
+      "headerTitle": "👋 Necesitas productos naturales!",
+      "placeholder": "Escriba aquí",
+      "zIndex": 10,
+      "enabled": true
+    },
+    "favicon": "@PROJECT_PATH@/assets/images/logo-pandy-128x92.png",
+    "mbrsiteDomain": "s7lom6u5sd",
+    "robotsSwitcher": true,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": "on",
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 4,
+    "versionPublish": "5.5.0",
+    "screenshot": "screenshot.png",
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\n"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "overflow": "hidden",
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".row": {
+              "overflow": "hidden",
+              "z-index": "2",
+              "position": "relative",
+              "-webkit-box-pack": "end",
+              "justify-content": "flex-end",
+              "pointer-events": "none"
+            },
+            ".content": {
+              "@media (min-width: 992px)": {
+                "max-width": "800px",
+                "margin": "auto 0"
+              },
+              "@media (min-width: 767px)": {
+                "padding": "10rem 2rem",
+                "padding-bottom": "12rem"
+              },
+              "margin": "auto 0",
+              "pointer-events": "all",
+              "padding-top": "5rem",
+              "padding-bottom": "5rem"
+            },
+            ".container": {
+              "max-width": "1600px"
+            },
+            ".mbr-bold, b": {
+              "font-weight": "900"
+            },
+            ".btn": {
+              "color": "white !important"
+            },
+            "svg": {
+              "position": "absolute",
+              "bottom": "-25%",
+              "left": "50%",
+              "right": "50%",
+              "-webkit-transform": "translateX(-50%) scaleY(0.8)",
+              "transform": "translateX(-50%) scaleY(0.8)",
+              "z-index": "1",
+              "path": {
+                "fill": "@svg"
+              }
+            },
+            "@media (max-width: 1200px)": {
+              "svg": {
+                "-webkit-transform": "translateX(-50%) scaleY(0.8) scaleX(1.8)",
+                "transform": "translateX(-50%) scaleY(0.8) scaleX(1.8)"
+              }
+            },
+            "@media (max-width: 992px)": {
+              "svg": {
+                "-webkit-transform": "translateX(-50%) scaleY(0.8) scaleX(2.2)",
+                "transform": "translateX(-50%) scaleY(0.8) scaleX(2.2)"
+              }
+            },
+            "@media (max-width: 767px)": {
+              "svg": {
+                "-webkit-transform": "translateX(-80%) scaleY(0.8) scaleX(5)",
+                "transform": "translateX(-80%) scaleY(0.8) scaleX(5)"
+              },
+              ".mbr-overlay": {
+                "opacity": "0.2 !important"
+              }
+            }
+          },
+          "_name": "header3",
+          "_sourceTheme": "petsm4",
+          "_customHTML": "<section group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Bottom Color\" name=\"svg\" value=\"#ffffff\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/p1040284-2000x1334.jpg\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#7aba59\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#181818\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\" height=\"100%\" preserveAspectRatio=\"none\" viewBox=\"0 0 858 235\" style>\n        <title>my vector image</title>\n        <!-- Created with Vector Paint - http://www.vectorpaint.yaks.com/ https://chrome.google.com/webstore/detail/hnbpdiengicdefcjecjbnjnoifekhgdo -->\n        <rect id=\"backgroundrect\" width=\"100%\" height=\"100%\" x=\"0\" y=\"0\" fill=\"transparent\" stroke=\"none\" class style>\n        </rect>\n        <g class=\"currentLayer\" style>\n            <title>Layer 1</title>\n            <path fill=\"#4a90d6\" fill-opacity=\"1\" stroke=\"none\" stroke-width=\"2\" stroke-dasharray=\"none\" stroke-linejoin=\"round\" stroke-linecap=\"butt\" stroke-dashoffset fill-rule=\"nonzero\" opacity=\"1\" marker-start marker-mid marker-end d=\"M13.91718,157.55035C128.42169,209.00593 174.16977,66.43387 406.36266,148.04844C638.55554,229.66302 649.93992,110.39426 837.69295,145.53147C1025.44597,180.66868 893.71138,356.73312 396.9054,368.57034C-99.90058,380.40757 -100.58733,106.09477 13.91718,157.55035z\" id=\"svg_1\" class></path>\n        </g>\n    </svg>\n    <div class=\"container\">\n\n        <div class=\"row\">\n            <div class=\"col-md-7 content align-left col-lg-6\">\n\n\n                <h1 class=\"mbr-section-title align-left mbr-white mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">Productos Naturales</h1>\n                <p class=\"mbr-text pb-3 mbr-white mbr-semibold align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Para una vida Sana y Saludable</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"align-left mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">LIVE DEMO</a> <a class=\"btn btn-md btn-primary-outline\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">BUY NOW</a></div>\n\n            </div>\n\n        </div>\n    </div>\n</section>",
+          "_cid": "sfaod8WWCq",
+          "_anchor": "header3-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".card": {
+              "flex-direction": "row",
+              "margin-bottom": "3rem",
+              "&:hover": {
+                ".mbr-iconfont": {
+                  "color": "@iconColor2 !important"
+                }
+              }
+            },
+            ".text, .icon": {
+              "display": "flex",
+              "align-items": "center"
+            },
+            ".align-wrap": {
+              "width": "fit-content",
+              "display": "inline-block"
+            },
+            "h3": {
+              "line-height": "1.3",
+              "margin": "0"
+            },
+            ".mbr-iconfont": {
+              "font-size": "3rem",
+              "transition": "all 0.6s",
+              "color": "@iconColor !important",
+              "padding-right": "1.5rem",
+              "display": "block"
+            },
+            "@media (max-width: 992px)": {
+              ".content": {
+                "margin": "auto"
+              }
+            },
+            "H3": {
+              "text-align": "left",
+              "color": "#0b1b3f"
+            },
+            "H1": {
+              "color": "#0b1b3f"
+            }
+          },
+          "_name": "features8",
+          "_customHTML": "<section group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"5\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"5\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Items\" name=\"showIcons\" checked>\n        <input type=\"color\" title=\"Icon Color\" name=\"iconColor\" value=\"#ed6436\" selected>\n        <input type=\"color\" title=\"Icon Hover Color\" name=\"iconColor2\" value=\"#0b1b3f\" selected>\n        <select name=\"cards\" title=\"Items\" condition=\"showIcons\">\n            <option value=\"1\" selected>1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-12 content col-lg-6 m-auto\">\n                <h1 class=\"mbr-section-title align-left mbr-bold pb-5 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">La mejor atención para el mejor lugar</h1>\n\n\n\n                <div class=\"row\" mbr-if=\"showIcons\">\n\n                    <div class=\"col-md-6 card\" mbr-if=\"cards > 0\">\n\n                        <div class=\"icon\"> <span mbr-icon class=\"mbr-iconfont mbrib-hearth  \" mbr-if=\"showIcons\"></span>\n                        </div>\n\n                        <div class=\"text\">\n                            <h3 class=\"align-left mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\">Atención personalizada</h3>\n                        </div>\n                    </div>\n\n                    <div class=\"col-md-6 card\" mbr-if=\"cards > 1\">\n\n                        <div class=\"icon\"> <span mbr-icon class=\"mbr-iconfont mbrib-sun  \" mbr-if=\"showIcons\"></span>\n                        </div>\n\n                        <div class=\"text\">\n                            <h3 class=\"align-left mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\">OPTIMAL\n                                TEMPERATURES</h3>\n                        </div>\n                    </div>\n\n                    <div class=\"col-md-6 card\" mbr-if=\"cards > 2\">\n\n                        <div class=\"icon\"> <span mbr-icon class=\"mbr-iconfont mbrib-protect  \" mbr-if=\"showIcons\"></span> </div>\n\n                        <div class=\"text\">\n                            <h3 class=\"align-left mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\">EXCEPTIONAL\n                                QUALITY</h3>\n                        </div>\n                    </div>\n\n                    <div class=\"col-md-6 card\" mbr-if=\"cards > 3\">\n\n                        <div class=\"icon\"> <span mbr-icon class=\"mbr-iconfont mbrib-users  \" mbr-if=\"showIcons\"></span>\n                        </div>\n\n                        <div class=\"text\">\n                            <h3 class=\"align-left mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\">MADE BY EXPERTS\n                                NUTRITION</h3>\n                        </div>\n                    </div>\n\n\n\n\n                </div>\n\n\n\n\n            </div>\n            <div class=\"col-md-12 col-lg-6 img-col\">\n                <div class=\"mbr-figure\">\n                    <img src=\"@PROJECT_PATH@/assets/images/img-20211109-221611-1050x1400.jpg\" alt=\"Mobirise\">\n                </div>\n\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "features8-2",
+          "_isUserblock": true,
+          "_sourceTheme": "petsm4",
+          "_cid": "rGtUj7JDUr",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".content": {
+              "@media (min-width: 992px)": {
+                "max-width": "550px",
+                "margin": "auto 0"
+              },
+              "@media (min-width: 767px)": {
+                "padding": "0 2rem"
+              }
+            },
+            ".row": {
+              "justify-content": "flex-end"
+            },
+            ".img-col": {
+              "padding": "0"
+            },
+            ".icon-wrap": {
+              "display": "flex",
+              "align-items": "center",
+              "margin-bottom": "1.5rem",
+              "margin-right": "2rem",
+              "h3": {
+                "margin": "0"
+              }
+            },
+            ".align-wrap": {
+              "width": "fit-content",
+              "display": "inline-block"
+            },
+            ".mbr-iconfont": {
+              "font-size": "1.8rem",
+              "padding-right": "0.8rem",
+              "padding-bottom": "4px"
+            },
+            ".icon-title, .mbr-iconfont": {
+              "color": "#181818"
+            },
+            ".icons-wrap": {
+              "display": "flex"
+            },
+            "@media (max-width: 992px)": {
+              ".content": {
+                "margin": "auto"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".icons-wrap": {
+                "flex-direction": "column"
+              },
+              ".icon-wrap": {
+                "margin-right": "0rem"
+              }
+            }
+          },
+          "_name": "header1",
+          "_customHTML": "<section group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"5\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"5\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12 content align-left py-4 col-lg-5 \">\n\n                <h1 class=\"mbr-section-title align-left mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">Productos Naturales al paso</h1>\n                <p class=\"mbr-text pb-3 align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn, .content\"> En el corazón de las compañías&nbsp;</p>\n\n                <div class=\"align-wrap align-left\" mbr-if=\"showIcons\">\n                    <div class=\"icons-wrap\" mbr-if=\"showIcons\">\n                        <div class=\"icon-wrap\">\n                            <span mbr-icon class=\"mbr-iconfont mbrib-apple  \"></span>\n                            <h3 class=\"icon-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".icon-title, .mbr-iconfont\">EAT</h3>\n                        </div>\n                        <div class=\"icon-wrap\">\n                            <span mbr-icon class=\"mbr-iconfont mbrib-globe  \"></span>\n                            <h3 class=\"icon-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".icon-title, .mbr-iconfont\">PLAY</h3>\n                        </div>\n                        <div class=\"icon-wrap\">\n                            <span mbr-icon class=\"mbr-iconfont mbrib-github  \"></span>\n                            <h3 class=\"icon-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".icon-title, .mbr-iconfont\">BRUSH</h3>\n                        </div>\n\n                    </div>\n                </div>\n\n\n\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"align-left mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">VIEW MORE</a> <a class=\"btn btn-md btn-primary-outline\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">SHOP NOW</a></div>\n\n            </div>\n            <div class=\"col-md-12 col-lg-7 img-col\">\n                <div class=\"mbr-figure\">\n                    <img src=\"@PROJECT_PATH@/assets/images/fondo1pilar-1-1920x1080.png\" alt=\"Mobirise\">\n                </div>\n\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "header1-g",
+          "_isUserblock": true,
+          "_sourceTheme": "petsm4",
+          "_cid": "rGzgI03jEE",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".content": {
+              "@media (min-width: 992px)": {
+                "max-width": "550px",
+                "margin": "auto 0"
+              },
+              "@media (min-width: 767px)": {
+                "padding": "0 2rem"
+              }
+            },
+            ".icon-wrap": {
+              "display": "flex",
+              "margin-bottom": "2rem",
+              "p": {
+                "margin-bottom": "0.2rem"
+              }
+            },
+            ".mbr-iconfont": {
+              "font-size": "3.5rem",
+              "color": "@iconColor !important",
+              "padding-right": "1.5rem",
+              "padding-bottom": "4px"
+            },
+            ".icon-title, .mbr-iconfont": {
+              "color": "#ed6436"
+            },
+            ".icons-wrap": {
+              "display": "flex"
+            },
+            ".google-map": {
+              "height": "100%",
+              "position": "relative",
+              "iframe": {
+                "height": "100%",
+                "width": "100%"
+              },
+              "[data-state-details]": {
+                "color": "#6b6763",
+                "font-family": "Montserrat",
+                "height": "1.5em",
+                "margin-top": "-0.75em",
+                "padding-left": "1.25rem",
+                "padding-right": "1.25rem",
+                "position": "absolute",
+                "text-align": "center",
+                "top": "50%",
+                "width": "100%"
+              },
+              "&[data-state]": {
+                "background": "#e9e5dc"
+              },
+              "&[data-state=\"loading\"]": {
+                "[data-state-details]": {
+                  "display": "none"
+                }
+              }
+            },
+            "@media (max-width: 992px)": {
+              ".content": {
+                "margin": "auto"
+              },
+              ".google-map": {
+                "height": "30rem"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".icons-wrap": {
+                "flex-direction": "column"
+              },
+              ".icon-wrap": {
+                "margin-right": "0rem"
+              },
+              ".google-map": {
+                "height": "20rem"
+              }
+            }
+          },
+          "_name": "map2",
+          "_customHTML": "<section group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"5\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"5\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n        <input type=\"color\" title=\"Icons Color\" name=\"iconColor\" value=\"#7aba59\" selected condition=\"showIcons\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <select title=\"Items\" name=\"items\">\n            <option value=\"1\">1</option>\n            <option value=\"2\" selected>2</option>\n            <option value=\"3\">3</option>\n        </select>\n        <input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"Pje. Mármol 2558, La Serena, Coquimbo\" value=\"Pje. Mármol 2558, La Serena, Coquimbo\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background2.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-12 content py-4 col-lg-6 \">\n\n                <h1 class=\"mbr-section-title align-left mbr-bold pb-4 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">Contactanos</h1>\n\n\n                <div class=\"align-wrap\" mbr-if=\"items > 0\">\n                    <div class=\"icons-wrap\">\n                        <div class=\"icon-wrap\">\n                            <span mbr-icon class=\"mbr-iconfont mbrib-timer  \" mbr-if=\"showIcons\"></span>\n                            <div class=\"text-wrap\">\n                                <h3 class=\"icon-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".icon-title, .mbr-iconfont\">Lunes a Viernes</h3>\n                                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn, .content\"> 11 am - 20:30 pm</p>\n                            </div>\n                        </div>\n\n\n                    </div>\n\n\n                    <div class=\"icons-wrap\" mbr-if=\"items > 1\">\n                        <div class=\"icon-wrap\">\n                            <span mbr-icon class=\"mbr-iconfont mbrib-clock\" mbr-if=\"showIcons\"></span>\n                            <div class=\"text-wrap\">\n                                <h3 class=\"icon-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".icon-title, .mbr-iconfont\">Sábado</h3>\n                                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn, .content\">11 am - 14:00</p>\n                            </div>\n                        </div>\n\n\n                    </div>\n\n                    <div class=\"icons-wrap\" mbr-if=\"items > 2\">\n                        <div class=\"icon-wrap\">\n                            <span mbr-icon class=\"mbr-iconfont mbrib-globe  \" mbr-if=\"showIcons\"></span>\n                            <div class=\"text-wrap\">\n                                <h3 class=\"icon-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".icon-title, .mbr-iconfont\">FROM 8 AM TO 10 PM</h3>\n                                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn, .content\"> Lorem ipsum dolor sit\n                                    amet, consectetur\n                                    adipiscing elit. Sed eu dui non diam.</p>\n                            </div>\n                        </div>\n\n\n                    </div>\n\n\n                </div>\n\n\n            </div>\n            <div class=\"col-md-12 col-lg-6 img-col\">\n                <div class=\"google-map\" mbr-map=\"googleMap\">\n                </div>\n\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "map2-d",
+          "_isUserblock": true,
+          "_sourceTheme": "petsm4",
+          "_cid": "rGtUmJwsl4",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            ".mbr-overlay": {
+              "background-color": "@overlayColor",
+              "opacity": "@overlayOpacity"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "img": {
+              "width": "40px",
+              "height": "40px",
+              "margin-right": "0.8rem"
+            },
+            "h3": {
+              "margin": "0"
+            },
+            ".btn": {
+              "width": "100%",
+              "border-radius": "30px",
+              "border-top-right-radius": "0",
+              "padding": "0.4rem 1rem"
+            },
+            ".icons-wrap": {
+              "display": "flex",
+              "align-items": "center"
+            },
+            ".text-wrap": {
+              "width": "100%"
+            },
+            ".item-wrap": {
+              "display": "inline-block",
+              "width": "fit-content"
+            },
+            ".socicon-wrap": {
+              "width": "fit-content",
+              "display": "flex",
+              "margin-bottom": "0.8rem",
+              ".mbr-iconfont": {
+                "font-size": "1.2rem",
+                "color": "@iconColor !important",
+                "background": "@iconColor2",
+                "padding": "10px",
+                "margin-right": "0.6rem",
+                "border": "2px solid @iconColor2",
+                "height": "40px",
+                "display": "flex",
+                "width": "40px",
+                "justify-content": "center",
+                "align-items": "center",
+                "transition": "all 0.3s",
+                "border-radius": "100%",
+                "&:hover": {
+                  "background": "@iconColor",
+                  "color": "@iconColor2 !important",
+                  "border": "2px solid @iconColor2"
+                }
+              },
+              "p": {
+                "margin-bottom": "0.2rem"
+              }
+            },
+            ".jq-selectbox__dropdown, ul": {
+              "border-radius": "20px!important"
+            },
+            ".jq-selectbox": {
+              "border-radius": "30px"
+            },
+            ".jq-selectbox__select": {
+              "padding": "1.2rem 1.5rem"
+            },
+            ".jq-selectbox li": {
+              "padding": "1.2rem 1.5rem"
+            },
+            "input, textarea, .select": {
+              "border-radius": "30px"
+            },
+            "input, textarea": {
+              "padding": "1rem 2rem"
+            },
+            "textarea": {
+              "min-height": "10rem"
+            },
+            "& when (@customStyle)": {
+              ".form-control, .field-input": {
+                "padding": "1rem 1.5rem",
+                "background-color": "@fieldColor",
+                "border-color": "@borderColor",
+                "color": "@formText",
+                "transition": "0.4s",
+                "box-shadow": "none",
+                "outline": "none",
+                "&::-webkit-input-placeholder, &::-webkit-input-placeholder": {
+                  "color": "@formPlaceholder"
+                },
+                "&:-moz-placeholder, &:-moz-placeholder": {
+                  "color": "@formPlaceholder"
+                },
+                "&:hover, &:focus": {
+                  "background-color": "@fieldHover",
+                  "border-color": "@borderHover",
+                  "color": "@formFocusText",
+                  "box-shadow": "none",
+                  "outline": "none",
+                  "&::-webkit-input-placeholder, &::-webkit-input-placeholder": {
+                    "color": "@formFocusPlaceholder"
+                  },
+                  "&:-moz-placeholder, &:-moz-placeholder": {
+                    "color": "@formFocusPlaceholder"
+                  }
+                }
+              },
+              ".jq-number__spin:hover, .jq-number__spin:focus": {
+                "background-color": "@fieldHover",
+                "border-color": "@borderHover",
+                "color": "contrast(@formText, #000000, #ffffff, 30%)",
+                "box-shadow": "none",
+                "outline": "none"
+              },
+              ".jq-number__spin": {
+                "background-color": "@fieldColor",
+                "border-color": "@borderColor",
+                "color": "@formText",
+                "transition": "0.4s",
+                "box-shadow": "none",
+                "outline": "none"
+              },
+              ".jq-selectbox li, .jq-selectbox li": {
+                "background-color": "@fieldColor",
+                "color": "contrast(@fieldColor, #000000, #ffffff, 30%)"
+              },
+              ".jq-selectbox li:hover, .jq-selectbox li.selected": {
+                "background-color": "@fieldHover",
+                "color": "contrast(@fieldHover, #000000, #ffffff, 30%)"
+              },
+              ".jq-selectbox:hover .jq-selectbox__trigger-arrow, .jq-number__spin.minus:hover:after, .jq-number__spin.plus:hover:after": {
+                "border-top-color": "@fieldColor",
+                "border-bottom-color": "@fieldColor"
+              },
+              ".jq-selectbox .jq-selectbox__trigger-arrow, .jq-number__spin.minus:after, .jq-number__spin.plus:after": {
+                "border-top-color": "@fieldHover",
+                "border-bottom-color": "@fieldHover"
+              }
+            },
+            "& when (@customStyle), (@disableElements)": {
+              "input::-webkit-clear-button": {
+                "display": "none"
+              },
+              "input::-webkit-inner-spin-button": {
+                "display": "none"
+              },
+              "input::-webkit-outer-spin-button": {
+                "display": "none"
+              },
+              "input::-webkit-calendar-picker-indicator": {
+                "display": "none"
+              }
+            },
+            ".col-md-6": {
+              "margin-bottom": "2rem"
+            },
+            ".form-group": {
+              "margin-bottom": "0.4rem"
+            },
+            ".form-control": {
+              "min-height": "2em",
+              "font-size": "1rem",
+              "text-align": "center"
+            },
+            ".title1": {
+              "margin": "0"
+            },
+            ".align-wrap": {
+              "display": "block"
+            },
+            ".mbr-iconfont": {
+              "font-size": "1.2rem",
+              "color": "@iconColor3 !important",
+              "padding-right": "1rem"
+            },
+            "@media (max-width: 767px)": {
+              "form": {
+                "padding": "0"
+              },
+              ".socicon-wrap": {
+                "margin": "auto"
+              }
+            },
+            ".title": {
+              "color": "#ed6436"
+            }
+          },
+          "_name": "footer2",
+          "_customHTML": "<section class=\"form\" group=\"Form\" plugins=\"formstyler, datepicker\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <header>Style</header>\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconColor3\" value=\"#181818\" selected>\n        <input type=\"color\" title=\"Soc Icons Color\" name=\"iconColor\" value=\"#ffffff\" selected>\n        <input type=\"color\" title=\"Soc Icons BG\" name=\"iconColor2\" value=\"#ed6436\" selected>\n        <input type=\"range\" inline title=\"Icons\" name=\"icons\" min=\"0\" max=\"4\" step=\"1\" value=\"1\">\n\n\n        <select title=\"Items\" name=\"items\">\n            <option value=\"1\" selected>1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n        </select>\n        <select title=\"Links\" name=\"links\">\n            <option value=\"1\" selected>1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n        </select>\n        <input type=\"checkbox\" name=\"customStyle\" title=\"Custom Style\">\n        <input type=\"checkbox\" name=\"disableElements\" title=\"Disable Control\">\n        <input type=\"color\" name=\"fieldColor\" title=\"Field\" value=\"#ffffff\" condition=\"customStyle\">\n        <input type=\"color\" name=\"fieldHover\" title=\"Field Hover\" value=\"#ffffff\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderColor\" title=\"Border\" value=\"#cccccc\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderHover\" title=\"Border Hover\" value=\"#ed6436\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formText\" title=\"Text\" value=\"#181818\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formFocusText\" title=\"Text Focus\" value=\"#181818\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formPlaceholder\" title=\"Placeholders\" value=\"#383838\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formFocusPlaceholder\" title=\"Placeholders Focus\" value=\"#383838\" condition=\"customStyle\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"(overlay && bg.type=='image')\"></div>\n    <div class=\"container\">\n        <div class=\"row\">\n\n\n            <div class=\"col-md-6 title-col align-left col-lg-3\">\n\n                <div class=\"item-wrap pb-4\">\n                    <div class=\"icons-wrap\">\n                        <img src=\"@PROJECT_PATH@/assets/images/logo-pandy-80x58.png\" alt=\"Mobirise\" mbr-if=\"showLogo\">\n                        <h2 class=\"title1 align-left p-0 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".title1, .title-col\">Pandy<br>Productos Naturales<br><br></h2>\n                    </div>\n                </div>\n                <div class=\"socicon-wrap\">\n                    <a href=\"https://www.facebook.com/productosnaturalespandy/\"><span mbr-icon class=\"mbr-iconfont socicon-facebook socicon\" mbr-if=\"icons > 0\"></span></a>\n                    <span mbr-icon class=\"mbr-iconfont socicon-instagram socicon\" mbr-if=\"icons > 1\"></span>\n                    <span mbr-icon class=\"mbr-iconfont socicon-youtube socicon\" mbr-if=\"icons > 2\"></span>\n                    <span mbr-icon class=\"mbr-iconfont socicon-instagram socicon\" mbr-if=\"icons > 3\"></span>\n                </div>\n\n\n            </div>\n\n\n            <div class=\"col-md-6 col-lg-3\">\n\n                <h2 class=\"title align-left mbr-bold pb-2 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".title\">Donde encontrarnos</h2>\n\n                <div class=\"align-wrap align-left\" mbr-if=\"items > 0\">\n\n                    <div class=\"item-wrap\">\n                        <div class=\"icons-wrap pb-2\">\n                            <span mbr-icon class=\"mbr-iconfont mobi-mbri-globe-2 mobi-mbri\"></span>\n                            <h3 class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">Marmol 2558, Compañías Alta, La Serena</h3>\n                        </div>\n                    </div>\n\n                    <div class=\"item-wrap\">\n                        <div class=\"icons-wrap pb-2\" mbr-if=\"items > 1\">\n\n                            <span mbr-icon class=\"mbr-iconfont mbrib-key\"></span>\n\n                            <h3 class=\"icon-title align-left mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">+2342 5446 67</h3>\n\n\n                        </div>\n\n                    </div>\n                    <div class=\"item-wrap\">\n                        <div class=\"icons-wrap pb-2\" mbr-if=\"items > 2\">\n\n                            <span mbr-icon class=\"mbr-iconfont mbrib-pin\"></span>\n\n                            <h3 class=\"icon-title align-left mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">Mon - Sun: 8AM - 8PM</h3>\n\n                        </div>\n\n\n                    </div>\n                </div>\n\n            </div>\n\n\n            <div class=\"col-md-6 col-lg-3\">\n\n\n                <h2 class=\"title mbr-bold align-left pb-2 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".title\">Urgencias</h2>\n\n                <h3 class=\"links-title align-left pb-2 mbr-regular mbr-fonts-style\" mbr-if=\"links > 0\" mbr-theme-style=\"display-4\" data-app-selector=\".links-title\">Llamanos! +56987280921</h3>\n\n                <h3 class=\"links-title align-left pb-2 mbr-regular mbr-fonts-style\" mbr-if=\"links > 1\" mbr-theme-style=\"display-4\" data-app-selector=\".links-title\">Cat Boarding Services</h3>\n\n                <h3 class=\"links-title align-left pb-2 mbr-regular mbr-fonts-style\" mbr-if=\"links > 2\" mbr-theme-style=\"display-4\" data-app-selector=\".links-title\">Spa and Grooming Services</h3>\n\n\n\n\n\n            </div>\n\n\n\n\n            \n        </div>\n    </div>\n</section>",
+          "_anchor": "footer2-e",
+          "_isUserblock": true,
+          "_sourceTheme": "petsm4",
+          "_cid": "rGtUn0OFxn",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            ".dropdown-item:before": {
+              "font-family": "MobiriseIcons !important",
+              "content": "'\\e966'",
+              "display": "inline-block",
+              "width": "0",
+              "position": "absolute",
+              "left": "1rem",
+              "top": "0.5rem",
+              "margin-right": "0.5rem",
+              "line-height": "1",
+              "font-size": "inherit",
+              "vertical-align": "middle",
+              "text-align": "center",
+              "overflow": "hidden",
+              "-webkit-transform": "scale(0, 1)",
+              "transform": "scale(0, 1)",
+              "-webkit-transition": "all 0.25s ease-in-out",
+              "transition": "all 0.25s ease-in-out"
+            },
+            ".nav-item:focus, .nav-link:focus": {
+              "outline": "none"
+            },
+            ".navbar-short": {
+              "box-shadow": "0px 0px 10px 0px rgba(150, 150, 150, 0.3)"
+            },
+            ".dropdown .dropdown-menu .dropdown-item": {
+              "font-weight": "700 !important",
+              "padding": "0 !important",
+              "border-bottom": "1px solid lightgray",
+              "margin": "0.5rem 1rem !important",
+              "&:hover, &:active, &:focus": {
+                "color": "@primaryColor !important"
+              },
+              "width": "auto",
+              "-webkit-transition": "all 0.25s ease-in-out",
+              "transition": "all 0.25s ease-in-out",
+              "&::after": {
+                "right": "0.5rem"
+              },
+              ".mbr-iconfont": {
+                "margin-left": "-1.8rem",
+                "padding-right": "1rem",
+                "font-size": "inherit",
+                "&:before": {
+                  "display": "inline-block",
+                  "-webkit-transform": "scale(1, 1)",
+                  "transform": "scale(1, 1)",
+                  "-webkit-transition": "all 0.25s ease-in-out",
+                  "transition": "all 0.25s ease-in-out"
+                }
+              }
+            },
+            ".navbar-caption": {
+              "&:hover": {
+                "color": "inherit !important"
+              }
+            },
+            ".container": {
+              "max-width": "1380px"
+            },
+            ".nav-dropdown .link": {
+              "padding": "0.8rem 0 !important",
+              "margin": "0rem 1.5rem !important"
+            },
+            ".nav-link": {
+              "font-weight": "700 !important",
+              "border-bottom": "3px solid transparent",
+              "-webkit-transition": "all 0.3s",
+              "transition": "all 0.3s",
+              "&:hover, &:active, &:focus": {
+                "border-bottom": "3px solid @primaryColor",
+                "color": "@primaryColor !important"
+              }
+            },
+            ".navbar": {
+              "min-height": "77px",
+              "-webkit-transition": "all .3s",
+              "transition": "all .3s",
+              "background": "@menuBgColor",
+              "& when (@transparent)": {
+                "background": "none"
+              },
+              "&.opened": {
+                "-webkit-transition": "all .3s",
+                "transition": "all .3s",
+                "background": "@menuBgColor !important"
+              },
+              ".dropdown-item": {
+                "padding": ".235rem 1.5rem"
+              },
+              ".navbar-collapse": {
+                "-webkit-box-pack": "end",
+                "justify-content": "flex-end",
+                "z-index": "1",
+                "& when not (@showItems)": {
+                  "display": "none !important"
+                }
+              },
+              "&.collapsed": {
+                ".nav-item .nav-link::before": {
+                  "display": "none"
+                },
+                "&.opened": {
+                  ".dropdown-menu": {
+                    "top": "0"
+                  },
+                  "@media (min-width: 992px)": {
+                    "&:not(.navbar-short) .navbar-collapse when (@showLogo)": {
+                      "max-height": "~\"calc(98.5vh - @{logoSize}rem)\""
+                    }
+                  }
+                },
+                ".dropdown-menu": {
+                  "background": "transparent !important",
+                  ".dropdown-submenu": {
+                    "left": "0 !important"
+                  },
+                  ".dropdown-item:after": {
+                    "right": "auto"
+                  },
+                  ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]:after": {
+                    "margin-left": ".25rem",
+                    "border-top": "0.35em solid",
+                    "border-right": "0.35em solid transparent",
+                    "border-left": "0.35em solid transparent",
+                    "border-bottom": "0",
+                    "top": "55%"
+                  }
+                },
+                "ul.navbar-nav": {
+                  "li": {
+                    "margin": "auto"
+                  }
+                },
+                ".dropdown-menu .dropdown-item": {
+                  "padding": ".25rem 1.5rem",
+                  "text-align": "center"
+                },
+                ".icons-menu": {
+                  "padding-left": "0",
+                  "padding-top": ".5rem",
+                  "padding-bottom": ".5rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".nav-item .nav-link::before": {
+                  "display": "none"
+                },
+                "&.opened": {
+                  ".dropdown-menu": {
+                    "top": "0"
+                  }
+                },
+                ".dropdown-menu": {
+                  "background": "transparent !important",
+                  ".dropdown-submenu": {
+                    "left": "0 !important"
+                  },
+                  ".dropdown-item:after": {
+                    "right": "auto"
+                  },
+                  ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]:after": {
+                    "margin-left": ".25rem",
+                    "border-top": "0.35em solid",
+                    "border-right": "0.35em solid transparent",
+                    "border-left": "0.35em solid transparent",
+                    "border-bottom": "0",
+                    "top": "55%"
+                  }
+                },
+                ".navbar-logo": {
+                  "img": {
+                    "height": "3.8rem !important"
+                  }
+                },
+                "ul.navbar-nav": {
+                  "li": {
+                    "margin": "auto"
+                  }
+                },
+                ".dropdown-menu .dropdown-item": {
+                  "padding": ".25rem 1.5rem !important",
+                  "text-align": "center"
+                },
+                ".navbar-brand": {
+                  "flex-shrink": "initial",
+                  "flex-basis": "auto",
+                  "word-break": "break-word"
+                },
+                ".navbar-toggler": {
+                  "flex-basis": "auto"
+                },
+                ".icons-menu": {
+                  "padding-left": "0",
+                  "padding-top": ".5rem",
+                  "padding-bottom": ".5rem"
+                }
+              },
+              "&.navbar-short": {
+                "background": "@menuBgColor !important",
+                "min-height": "60px",
+                ".navbar-logo": {
+                  "img": {
+                    "height": "3rem !important"
+                  }
+                },
+                ".navbar-brand": {
+                  "padding": "0"
+                }
+              }
+            },
+            ".icons-menu span": {
+              "color": "@iconColor !important"
+            },
+            ".collapsed": {
+              ".dropdown-menu .dropdown-item:before": {
+                "display": "none"
+              },
+              ".dropdown .dropdown-menu .dropdown-item": {
+                "padding": "0.235em 1.5em 0.235em 1.5em !important",
+                "-webkit-transition": "none",
+                "transition": "none",
+                "margin": "0 !important"
+              }
+            },
+            ".navbar-brand": {
+              "flex-shrink": "0",
+              "-webkit-box-align": "center",
+              "align-items": "center",
+              "margin-right": "0",
+              "padding": "0",
+              "-webkit-transition": "all .3s",
+              "transition": "all .3s",
+              "word-break": "break-word",
+              "z-index": "1",
+              ".navbar-caption": {
+                "line-height": "inherit !important"
+              },
+              ".navbar-logo a": {
+                "outline": "none"
+              }
+            },
+            ".dropdown-item.active, .dropdown-item:active": {
+              "background-color": "transparent"
+            },
+            ".navbar-expand-lg .navbar-nav .nav-link": {
+              "padding": "0"
+            },
+            ".nav-dropdown .link.dropdown-toggle": {
+              "margin-right": "1.667em",
+              "&[aria-expanded=\"true\"]": {
+                "margin-right": "0",
+                "padding": "0.667em 1.667em"
+              }
+            },
+            ".navbar.navbar-expand-lg .dropdown": {
+              ".dropdown-menu": {
+                "background": "@menuBgColor",
+                ".dropdown-submenu": {
+                  "margin": "0",
+                  "left": "100%"
+                }
+              }
+            },
+            ".navbar .dropdown.open > .dropdown-menu": {
+              "display": "block"
+            },
+            "ul.navbar-nav": {
+              "flex-wrap": "wrap"
+            },
+            ".navbar-buttons": {
+              "text-align": "center"
+            },
+            "button.navbar-toggler": {
+              "outline": "none",
+              "width": "31px",
+              "height": "20px",
+              "cursor": "pointer",
+              "-webkit-transition": "all .2s",
+              "transition": "all .2s",
+              "position": "relative",
+              "-webkit-align-self": "center",
+              "align-self": "center",
+              ".hamburger span": {
+                "position": "absolute",
+                "right": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "top": "0",
+                  "-webkit-transition": "all .2s",
+                  "transition": "all .2s"
+                },
+                "&:nth-child(2)": {
+                  "top": "8px",
+                  "-webkit-transition": "all .15s",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(3)": {
+                  "top": "8px",
+                  "-webkit-transition": "all .15s",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(4)": {
+                  "top": "16px",
+                  "-webkit-transition": "all .2s",
+                  "transition": "all .2s"
+                }
+              }
+            },
+            "nav.opened .hamburger span": {
+              "&:nth-child(1)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "-webkit-transition": "all .2s",
+                "transition": "all .2s"
+              },
+              "&:nth-child(2)": {
+                "-webkit-transform": "rotate(45deg)",
+                "transform": "rotate(45deg)",
+                "-webkit-transition": "all .25s",
+                "transition": "all .25s"
+              },
+              "&:nth-child(3)": {
+                "-webkit-transform": "rotate(-45deg)",
+                "transform": "rotate(-45deg)",
+                "-webkit-transition": "all .25s",
+                "transition": "all .25s"
+              },
+              "&:nth-child(4)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "-webkit-transition": "all .2s",
+                "transition": "all .2s"
+              }
+            },
+            ".navbar-dropdown": {
+              "padding": ".5rem 1rem",
+              "position": "fixed"
+            },
+            "a.nav-link": {
+              "display": "flex",
+              "-webkit-box-align": "center",
+              "align-items": "center",
+              "-webkit-box-pack": "center",
+              "justify-content": "center"
+            },
+            ".mbr-iconfont": {
+              "font-size": "1.5rem",
+              "padding-right": ".5rem"
+            },
+            ".icons-menu": {
+              "flex-wrap": "wrap",
+              "display": "flex",
+              "-webkit-box-pack": "center",
+              "justify-content": "center",
+              "padding-left": "1rem",
+              "padding-right": "1rem",
+              "text-align": "center",
+              "span": {
+                "font-size": "20px",
+                "color": "#ffffff"
+              }
+            },
+            "@media screen and (~'-ms-high-contrast: active'), (~'-ms-high-contrast: none')": {
+              ".navbar": {
+                "height": "77px",
+                "&.opened": {
+                  "height": "auto"
+                }
+              },
+              ".nav-item .nav-link:hover::before": {
+                "width": "175%",
+                "max-width": "calc(100% ~'+' 2rem)",
+                "left": "-1rem"
+              }
+            }
+          },
+          "_name": "menu1",
+          "_sourceTheme": "petsm4",
+          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"3\" max=\"8\" step=\"0.5\" value=\"3\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked>\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconColor\" value=\"#ed6436\">\n        <select title=\"Icons\" name=\"iconsAmount\" condition=\"showIcons\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\" checked>\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#181818\">\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n\n    <nav class=\"navbar navbar-dropdown navbar-fixed-top\" mbr-class=\"{\n                     'navbar-expand-lg':!collapsed,\n                     'collapsed':collapsed}\">\n        <div class=\"container\">\n            <div class=\"navbar-brand\">\n                <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                    <a href=\"https://mobiri.se\">\n                        <img src=\"@PROJECT_PATH@/assets/images/logo-pandy-128x92.png\" alt=\"Mobirise\" mbr-style=\"{'height': logoSize + 'rem'}\">\n                    </a>\n                </span>\n                <span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-5\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-black\" data-app-selector=\".navbar-caption\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Pandy Productos Naturales&nbsp;</a></span>\n            </div>\n            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems\">\n                <div class=\"hamburger\">\n                    <span></span>\n                    <span></span>\n                    <span></span>\n                    <span></span>\n                </div>\n            </button>\n            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n                <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n                        <a class=\"nav-link link text-black text-primary\" href=\"index.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\">\n                            Home</a>\n                    </li><li class=\"nav-item\"><a class=\"nav-link link text-black text-primary\" href=\"nuestrosproductos.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\">Nuestros Productos</a></li></ul>\n                <div class=\"icons-menu\" mbr-if=\"showIcons\">\n                    <a href=\"https://mobiri.se\" target=\"_blank\">\n                        <span mbr-icon class=\"p-2 mbr-iconfont socicon-behance socicon\"></span>\n                    </a>\n                    <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 1\">\n                        <span mbr-icon class=\"p-2 mbr-iconfont socicon-instagram socicon\"></span>\n                    </a>\n                    <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 2\">\n                        <span mbr-icon class=\"p-2 mbr-iconfont socicon-vimeo socicon\"></span>\n                    </a>\n                    <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 3\">\n                        <span mbr-icon class=\"p-2 mbr-iconfont mbri-info\"></span>\n                    </a>\n                    <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 4\">\n                        <span mbr-icon class=\"p-2 mbr-iconfont mbri-info\"></span>\n                    </a>\n                    <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 5\">\n                        <span mbr-icon class=\"p-2 mbr-iconfont mbri-info\"></span>\n                    </a>\n                </div>\n                <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-sm btn-primary-outline\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\"><span class=\"mobi-mbri mobi-mbri-phone mbr-iconfont mbr-iconfont-btn\"></span>&nbsp;+56987280921</a></div>\n            </div>\n        </div>\n    </nav>\n</section>",
+          "_cid": "sfaot0WkH7",
+          "_anchor": "menu1-1",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        }
+      ]
+    },
+    "nuestrosproductos.html": {
+      "settings": {
+        "title": "Nuestros Productos",
+        "order": 1,
+        "meta_descr": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            ".dropdown-item:before": {
+              "font-family": "MobiriseIcons !important",
+              "content": "'\\e966'",
+              "display": "inline-block",
+              "width": "0",
+              "position": "absolute",
+              "left": "1rem",
+              "top": "0.5rem",
+              "margin-right": "0.5rem",
+              "line-height": "1",
+              "font-size": "inherit",
+              "vertical-align": "middle",
+              "text-align": "center",
+              "overflow": "hidden",
+              "-webkit-transform": "scale(0, 1)",
+              "transform": "scale(0, 1)",
+              "-webkit-transition": "all 0.25s ease-in-out",
+              "transition": "all 0.25s ease-in-out"
+            },
+            ".nav-item:focus, .nav-link:focus": {
+              "outline": "none"
+            },
+            ".navbar-short": {
+              "box-shadow": "0px 0px 10px 0px rgba(150, 150, 150, 0.3)"
+            },
+            ".dropdown .dropdown-menu .dropdown-item": {
+              "font-weight": "700 !important",
+              "padding": "0 !important",
+              "border-bottom": "1px solid lightgray",
+              "margin": "0.5rem 1rem !important",
+              "&:hover, &:active, &:focus": {
+                "color": "@primaryColor !important"
+              },
+              "width": "auto",
+              "-webkit-transition": "all 0.25s ease-in-out",
+              "transition": "all 0.25s ease-in-out",
+              "&::after": {
+                "right": "0.5rem"
+              },
+              ".mbr-iconfont": {
+                "margin-left": "-1.8rem",
+                "padding-right": "1rem",
+                "font-size": "inherit",
+                "&:before": {
+                  "display": "inline-block",
+                  "-webkit-transform": "scale(1, 1)",
+                  "transform": "scale(1, 1)",
+                  "-webkit-transition": "all 0.25s ease-in-out",
+                  "transition": "all 0.25s ease-in-out"
+                }
+              }
+            },
+            ".navbar-caption": {
+              "&:hover": {
+                "color": "inherit !important"
+              }
+            },
+            ".container": {
+              "max-width": "1380px"
+            },
+            ".nav-dropdown .link": {
+              "padding": "0.8rem 0 !important",
+              "margin": "0rem 1.5rem !important"
+            },
+            ".nav-link": {
+              "font-weight": "700 !important",
+              "border-bottom": "3px solid transparent",
+              "-webkit-transition": "all 0.3s",
+              "transition": "all 0.3s",
+              "&:hover, &:active, &:focus": {
+                "border-bottom": "3px solid @primaryColor",
+                "color": "@primaryColor !important"
+              }
+            },
+            ".navbar": {
+              "min-height": "77px",
+              "-webkit-transition": "all .3s",
+              "transition": "all .3s",
+              "background": "@menuBgColor",
+              "& when (@transparent)": {
+                "background": "none"
+              },
+              "&.opened": {
+                "-webkit-transition": "all .3s",
+                "transition": "all .3s",
+                "background": "@menuBgColor !important"
+              },
+              ".dropdown-item": {
+                "padding": ".235rem 1.5rem"
+              },
+              ".navbar-collapse": {
+                "-webkit-box-pack": "end",
+                "justify-content": "flex-end",
+                "z-index": "1",
+                "& when not (@showItems)": {
+                  "display": "none !important"
+                }
+              },
+              "&.collapsed": {
+                ".nav-item .nav-link::before": {
+                  "display": "none"
+                },
+                "&.opened": {
+                  ".dropdown-menu": {
+                    "top": "0"
+                  },
+                  "@media (min-width: 992px)": {
+                    "&:not(.navbar-short) .navbar-collapse when (@showLogo)": {
+                      "max-height": "~\"calc(98.5vh - @{logoSize}rem)\""
+                    }
+                  }
+                },
+                ".dropdown-menu": {
+                  "background": "transparent !important",
+                  ".dropdown-submenu": {
+                    "left": "0 !important"
+                  },
+                  ".dropdown-item:after": {
+                    "right": "auto"
+                  },
+                  ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]:after": {
+                    "margin-left": ".25rem",
+                    "border-top": "0.35em solid",
+                    "border-right": "0.35em solid transparent",
+                    "border-left": "0.35em solid transparent",
+                    "border-bottom": "0",
+                    "top": "55%"
+                  }
+                },
+                "ul.navbar-nav": {
+                  "li": {
+                    "margin": "auto"
+                  }
+                },
+                ".dropdown-menu .dropdown-item": {
+                  "padding": ".25rem 1.5rem",
+                  "text-align": "center"
+                },
+                ".icons-menu": {
+                  "padding-left": "0",
+                  "padding-top": ".5rem",
+                  "padding-bottom": ".5rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".nav-item .nav-link::before": {
+                  "display": "none"
+                },
+                "&.opened": {
+                  ".dropdown-menu": {
+                    "top": "0"
+                  }
+                },
+                ".dropdown-menu": {
+                  "background": "transparent !important",
+                  ".dropdown-submenu": {
+                    "left": "0 !important"
+                  },
+                  ".dropdown-item:after": {
+                    "right": "auto"
+                  },
+                  ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]:after": {
+                    "margin-left": ".25rem",
+                    "border-top": "0.35em solid",
+                    "border-right": "0.35em solid transparent",
+                    "border-left": "0.35em solid transparent",
+                    "border-bottom": "0",
+                    "top": "55%"
+                  }
+                },
+                ".navbar-logo": {
+                  "img": {
+                    "height": "3.8rem !important"
+                  }
+                },
+                "ul.navbar-nav": {
+                  "li": {
+                    "margin": "auto"
+                  }
+                },
+                ".dropdown-menu .dropdown-item": {
+                  "padding": ".25rem 1.5rem !important",
+                  "text-align": "center"
+                },
+                ".navbar-brand": {
+                  "flex-shrink": "initial",
+                  "flex-basis": "auto",
+                  "word-break": "break-word"
+                },
+                ".navbar-toggler": {
+                  "flex-basis": "auto"
+                },
+                ".icons-menu": {
+                  "padding-left": "0",
+                  "padding-top": ".5rem",
+                  "padding-bottom": ".5rem"
+                }
+              },
+              "&.navbar-short": {
+                "background": "@menuBgColor !important",
+                "min-height": "60px",
+                ".navbar-logo": {
+                  "img": {
+                    "height": "3rem !important"
+                  }
+                },
+                ".navbar-brand": {
+                  "padding": "0"
+                }
+              }
+            },
+            ".icons-menu span": {
+              "color": "@iconColor !important"
+            },
+            ".collapsed": {
+              ".dropdown-menu .dropdown-item:before": {
+                "display": "none"
+              },
+              ".dropdown .dropdown-menu .dropdown-item": {
+                "padding": "0.235em 1.5em 0.235em 1.5em !important",
+                "-webkit-transition": "none",
+                "transition": "none",
+                "margin": "0 !important"
+              }
+            },
+            ".navbar-brand": {
+              "flex-shrink": "0",
+              "-webkit-box-align": "center",
+              "align-items": "center",
+              "margin-right": "0",
+              "padding": "0",
+              "-webkit-transition": "all .3s",
+              "transition": "all .3s",
+              "word-break": "break-word",
+              "z-index": "1",
+              ".navbar-caption": {
+                "line-height": "inherit !important"
+              },
+              ".navbar-logo a": {
+                "outline": "none"
+              }
+            },
+            ".dropdown-item.active, .dropdown-item:active": {
+              "background-color": "transparent"
+            },
+            ".navbar-expand-lg .navbar-nav .nav-link": {
+              "padding": "0"
+            },
+            ".nav-dropdown .link.dropdown-toggle": {
+              "margin-right": "1.667em",
+              "&[aria-expanded=\"true\"]": {
+                "margin-right": "0",
+                "padding": "0.667em 1.667em"
+              }
+            },
+            ".navbar.navbar-expand-lg .dropdown": {
+              ".dropdown-menu": {
+                "background": "@menuBgColor",
+                ".dropdown-submenu": {
+                  "margin": "0",
+                  "left": "100%"
+                }
+              }
+            },
+            ".navbar .dropdown.open > .dropdown-menu": {
+              "display": "block"
+            },
+            "ul.navbar-nav": {
+              "flex-wrap": "wrap"
+            },
+            ".navbar-buttons": {
+              "text-align": "center"
+            },
+            "button.navbar-toggler": {
+              "outline": "none",
+              "width": "31px",
+              "height": "20px",
+              "cursor": "pointer",
+              "-webkit-transition": "all .2s",
+              "transition": "all .2s",
+              "position": "relative",
+              "-webkit-align-self": "center",
+              "align-self": "center",
+              ".hamburger span": {
+                "position": "absolute",
+                "right": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "top": "0",
+                  "-webkit-transition": "all .2s",
+                  "transition": "all .2s"
+                },
+                "&:nth-child(2)": {
+                  "top": "8px",
+                  "-webkit-transition": "all .15s",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(3)": {
+                  "top": "8px",
+                  "-webkit-transition": "all .15s",
+                  "transition": "all .15s"
+                },
+                "&:nth-child(4)": {
+                  "top": "16px",
+                  "-webkit-transition": "all .2s",
+                  "transition": "all .2s"
+                }
+              }
+            },
+            "nav.opened .hamburger span": {
+              "&:nth-child(1)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "-webkit-transition": "all .2s",
+                "transition": "all .2s"
+              },
+              "&:nth-child(2)": {
+                "-webkit-transform": "rotate(45deg)",
+                "transform": "rotate(45deg)",
+                "-webkit-transition": "all .25s",
+                "transition": "all .25s"
+              },
+              "&:nth-child(3)": {
+                "-webkit-transform": "rotate(-45deg)",
+                "transform": "rotate(-45deg)",
+                "-webkit-transition": "all .25s",
+                "transition": "all .25s"
+              },
+              "&:nth-child(4)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "-webkit-transition": "all .2s",
+                "transition": "all .2s"
+              }
+            },
+            ".navbar-dropdown": {
+              "padding": ".5rem 1rem",
+              "position": "fixed"
+            },
+            "a.nav-link": {
+              "display": "flex",
+              "-webkit-box-align": "center",
+              "align-items": "center",
+              "-webkit-box-pack": "center",
+              "justify-content": "center"
+            },
+            ".mbr-iconfont": {
+              "font-size": "1.5rem",
+              "padding-right": ".5rem"
+            },
+            ".icons-menu": {
+              "flex-wrap": "wrap",
+              "display": "flex",
+              "-webkit-box-pack": "center",
+              "justify-content": "center",
+              "padding-left": "1rem",
+              "padding-right": "1rem",
+              "text-align": "center",
+              "span": {
+                "font-size": "20px",
+                "color": "#ffffff"
+              }
+            },
+            "@media screen and (~'-ms-high-contrast: active'), (~'-ms-high-contrast: none')": {
+              ".navbar": {
+                "height": "77px",
+                "&.opened": {
+                  "height": "auto"
+                }
+              },
+              ".nav-item .nav-link:hover::before": {
+                "width": "175%",
+                "max-width": "calc(100% ~'+' 2rem)",
+                "left": "-1rem"
+              }
+            }
+          },
+          "_name": "menu1",
+          "_sourceTheme": "petsm4",
+          "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"3\" max=\"8\" step=\"0.5\" value=\"3\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked>\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconColor\" value=\"#ed6436\">\n        <select title=\"Icons\" name=\"iconsAmount\" condition=\"showIcons\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"checkbox\" title=\"Transparent\" name=\"transparent\" checked>\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#181818\">\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n\n    <nav class=\"navbar navbar-dropdown navbar-fixed-top\" mbr-class=\"{\n                     'navbar-expand-lg':!collapsed,\n                     'collapsed':collapsed}\">\n        <div class=\"container\">\n            <div class=\"navbar-brand\">\n                <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                    <a href=\"https://mobiri.se\">\n                        <img src=\"@PROJECT_PATH@/assets/images/logo-pandy-128x92.png\" alt=\"Mobirise\" mbr-style=\"{'height': logoSize + 'rem'}\">\n                    </a>\n                </span>\n                <span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-5\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-black\" data-app-selector=\".navbar-caption\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Pandy Productos Naturales&nbsp;</a></span>\n            </div>\n            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems\">\n                <div class=\"hamburger\">\n                    <span></span>\n                    <span></span>\n                    <span></span>\n                    <span></span>\n                </div>\n            </button>\n            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n                <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n                        <a class=\"nav-link link text-black text-primary\" href=\"index.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\">\n                            Home</a>\n                    </li><li class=\"nav-item\"><a class=\"nav-link link text-black text-primary\" href=\"nuestrosproductos.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\" aria-expanded=\"false\">Nuestros Productos</a></li></ul>\n                <div class=\"icons-menu\" mbr-if=\"showIcons\">\n                    <a href=\"https://mobiri.se\" target=\"_blank\">\n                        <span mbr-icon class=\"p-2 mbr-iconfont socicon-behance socicon\"></span>\n                    </a>\n                    <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 1\">\n                        <span mbr-icon class=\"p-2 mbr-iconfont socicon-instagram socicon\"></span>\n                    </a>\n                    <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 2\">\n                        <span mbr-icon class=\"p-2 mbr-iconfont socicon-vimeo socicon\"></span>\n                    </a>\n                    <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 3\">\n                        <span mbr-icon class=\"p-2 mbr-iconfont mbri-info\"></span>\n                    </a>\n                    <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 4\">\n                        <span mbr-icon class=\"p-2 mbr-iconfont mbri-info\"></span>\n                    </a>\n                    <a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 5\">\n                        <span mbr-icon class=\"p-2 mbr-iconfont mbri-info\"></span>\n                    </a>\n                </div>\n                <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-sm btn-primary-outline\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\"><span class=\"mobi-mbri mobi-mbri-phone mbr-iconfont mbr-iconfont-btn\"></span>&nbsp;+56987280921</a></div>\n            </div>\n        </div>\n    </nav>\n</section>",
+          "_cid": "sfaot0WkH7",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {},
+          "_anchor": "menu1-0"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-shop": {
+              "display": "table",
+              "width": "100%"
+            },
+            ".mbr-shop .row": {
+              "margin": "0"
+            },
+            ".mbr-shop .btn-sm": {
+              "margin": "0.2rem 0.2rem"
+            },
+            ".mbr-shop .shoppingcart-icons": {
+              "z-index": "105 !important"
+            },
+            ".categories": {
+              "padding": "0"
+            },
+            "@media (min-width: 992px)": {
+              ".mbr-gallery-item": {
+                "width": "33.33%"
+              }
+            },
+            "li": {
+              "border-bottom": "1px solid rgba(0, 0, 0, 0.07)"
+            },
+            ".container": {
+              "max-width": "1400px"
+            },
+            ".mbr-shop .mbr-gallery-filter ul li:before": {
+              "content": "none",
+              "position": "absolute",
+              "left": "0",
+              "top": "50%",
+              "margin-top": "-2.5px",
+              "background": "rgba(0, 0, 0, 0.3)",
+              "width": "5px",
+              "height": "5px"
+            },
+            ".sidebar_wraper": {
+              "padding": "1rem 0"
+            },
+            ".galleryItem": {
+              "border": "1px solid rgba(0, 0, 0, 0.07)",
+              "border-radius": "30px",
+              "overflow": "hidden"
+            },
+            ".item-title": {
+              "padding-bottom": "0.4rem",
+              "font-weight": "700"
+            },
+            ".display-5": {
+              "font-size": "1.4rem"
+            },
+            ".shop-item-price, .oldprice": {
+              "font-size": "1.1rem",
+              "font-weight": "600 !important"
+            },
+            ".mbr-shop .sidebar-background:after": {
+              "background": "transparent !important",
+              "background-color": "rgba(0, 0, 0, 0.05)",
+              "content": "''",
+              "position": "absolute",
+              "width": "100%",
+              "height": "102%",
+              "top": "-20px",
+              "right": "3px"
+            },
+            ".mbr-shop .shop-title": {
+              "margin-bottom": "18px",
+              "padding-left": "25px",
+              "padding-right": "25px",
+              "display": "inline-block",
+              "max-width": "80%"
+            },
+            ".mbr-shop .sidebar-title": {
+              "line-height": "25px"
+            },
+            ".mbr-shop .shopItemsModal_wraper": {
+              "position": "fixed",
+              "display": "none",
+              "-webkit-box-align": "center",
+              "align-items": "center",
+              "-webkit-box-pack": "center",
+              "justify-content": "center",
+              "width": "100%",
+              "height": "100%",
+              "background-color": "rgba(87, 87, 87, 0.4)",
+              "top": "0",
+              "left": "0",
+              "cursor": "pointer",
+              "z-index": "1040"
+            },
+            ".mbr-shop .card-description": {
+              "cursor": "text",
+              "display": "none"
+            },
+            ".mbr-shop .image-modal": {
+              "padding-left": "0",
+              "padding-right": "0",
+              "text-align": "center"
+            },
+            ".mbr-shop .image-modal img": {
+              "max-width": "100%",
+              "max-height": "75vh"
+            },
+            ".mbr-shop .hide-modal": {
+              "display": "none"
+            },
+            ".mbr-shop .shopItemsModal": {
+              "cursor": "default",
+              "padding": "50px",
+              "width": "1000px",
+              "max-width": "100%",
+              "background-color": "#ffffff",
+              "z-index": "2000",
+              "overflow": "auto",
+              "position": "fixed"
+            },
+            ".mbr-shop .shopItemsModal p": {
+              "margin-bottom": "0"
+            },
+            ".mbr-shop .shopItemsModal ul": {
+              "margin-bottom": "0"
+            },
+            ".mbr-shop .shopItemsModal .card-description": {
+              "display": "block",
+              "width": "100%"
+            },
+            ".mbr-shop .shopItemsModal .close-modal": {
+              "content": "''",
+              "position": "absolute",
+              "top": "0",
+              "right": "0",
+              "width": "50px",
+              "height": "4px",
+              "background-color": "red",
+              "-webkit-transform": "rotate(45deg)",
+              "transform": "rotate(45deg)"
+            },
+            ".mbr-shop .shopItemsModal .close-modal:before": {
+              "content": "''",
+              "position": "absolute",
+              "top": "0",
+              "right": "0",
+              "width": "50px",
+              "height": "4px",
+              "background-color": "red",
+              "-webkit-transform": "rotate(-45deg)",
+              "transform": "rotate(-45deg)"
+            },
+            ".mbr-shop .test-overlay": {
+              "position": "absolute",
+              "width": "100%",
+              "height": "100%",
+              "background-color": "rgba(0, 0, 0, 0.5)"
+            },
+            ".mbr-shop .filter-by-pu, .mbr-shop .filter-by-pd, .mbr-shop .filter-by-d": {
+              "display": "inline-block",
+              "margin-right": "3px"
+            },
+            ".mbr-shop .sort-buttons": {
+              "padding-bottom": "1rem",
+              "margin-right": "13px",
+              "text-align": "right"
+            },
+            ".mbr-shop .galleryItem:before": {
+              "width": "0 !important",
+              "height": "0 !important"
+            },
+            ".mbr-shop .modal-dialog": {
+              "max-width": "700px"
+            },
+            ".mbr-shop .mbr-gallery-item": {
+              "left": "0 !important",
+              "top": "0 !important",
+              "vertical-align": "top",
+              "position": "relative !important",
+              "-webkit-transform": "none !important",
+              "transform": "none !important",
+              "padding": "10px"
+            },
+            ".mbr-shop .galleryItem h4, .mbr-shop .carousel-item h4": {
+              "font-style": "normal",
+              "line-height": "1",
+              "text-transform": "none",
+              "letter-spacing": "-1px",
+              "word-spacing": "0",
+              "margin-bottom": "0.3rem",
+              "padding-top": "15px",
+              "-webkit-transition": "color 0.5s",
+              "transition": "color 0.5s"
+            },
+            ".mbr-shop .galleryItem h5, .mbr-shop .carousel-item h5": {
+              "font-style": "italic",
+              "font-weight": "400",
+              "line-height": "22.36px",
+              "text-transform": "none",
+              "letter-spacing": "0px",
+              "word-spacing": "0"
+            },
+            ".mbr-shop .galleryItem p, .mbr-shop .carousel-item p": {
+              "font-style": "italic",
+              "font-weight": "400",
+              "text-transform": "none",
+              "letter-spacing": "0px",
+              "word-spacing": "0px",
+              "text-align": "center",
+              "display": "inline"
+            },
+            ".mbr-shop .item-button": {
+              "text-align": "center"
+            },
+            ".mbr-shop .modalButton": {
+              "display": "inline-block",
+              "float": "right",
+              "margin-right": "10px"
+            },
+            ".mbr-shop .modalButton.btn-success": {
+              "right": "15%"
+            },
+            ".mbr-shop .sidebar": {
+              "margin-top": "30px",
+              "position": "relative"
+            },
+            ".mbr-shop .sidebar-block": {
+              "position": "relative"
+            },
+            ".mbr-shop .bestsellers": {
+              "padding-left": "0",
+              "padding-right": "0",
+              "position": "relative",
+              "margin-bottom": "20px"
+            },
+            ".mbr-shop .bestsellers .onsale": {
+              "top": "-15px"
+            },
+            ".mbr-shop .bestsellers .price-block": {
+              "padding-top": "5px",
+              "text-align": "left",
+              "line-height": "1"
+            },
+            ".mbr-shop .bestsellers .mbr-gallery-item": {
+              "width": "100%"
+            },
+            ".mbr-shop .bestsellers .mbr-gallery-item img": {
+              "width": "80px",
+              "float": "left",
+              "margin-right": "20px"
+            },
+            ".mbr-shop .bestsellers .mbr-gallery-item h4": {
+              "text-align": "left",
+              "padding-bottom": "5px",
+              "line-height": "1",
+              "border-bottom": "1px solid rgba(0, 0, 0, 0.07)"
+            },
+            ".mbr-shop .bestsellers .mbr-gallery-item h5": {
+              "text-align": "left",
+              "display": "none"
+            },
+            ".mbr-shop .bestsellers .mbr-gallery-item p": {
+              "text-align": "left"
+            },
+            ".mbr-shop .bestsellers .btn": {
+              "display": "none"
+            },
+            ".mbr-shop .bestsellers-img": {
+              "display": "inline-block",
+              "width": "80px",
+              "height": "80px",
+              "overflow": "hidden"
+            },
+            ".mbr-shop .bestsellers-title": {
+              "display": "inline-block"
+            },
+            ".mbr-shop .onsale": {
+              "position": "absolute",
+              "top": "5px",
+              "right": "5px",
+              "display": "block",
+              "-webkit-transition": "color 0.3s ease",
+              "transition": "color 0.3s ease",
+              "text-align": "center",
+              "z-index": "95",
+              "height": "30px",
+              "line-height": "30px",
+              "padding": "0 15px",
+              "background": "@saleBg",
+              "border-radius": "30px",
+              "font-weight": "400",
+              "font-style": "normal",
+              "text-transform": "none",
+              "letter-spacing": "0px"
+            },
+            ".mbr-shop .mbr-gallery-item__hided": {
+              "display": "none"
+            },
+            ".mbr-shop .mbr-gallery-item__hided h4, .mbr-shop .mbr-gallery-item__hided h5, .mbr-shop .mbr-gallery-item__hided p": {
+              "display": "none"
+            },
+            ".mbr-shop .mbr-gallery-item__hided .btn": {
+              "display": "none"
+            },
+            ".mbr-shop .galleryItem .price-block": {
+              "display": "block",
+              "margin-bottom": "8px"
+            },
+            ".mbr-shop .galleryItem .price-block span": {
+              "font-style": "normal",
+              "font-weight": "700",
+              "line-height": "1",
+              "text-transform": "none",
+              "letter-spacing": "-1px",
+              "word-spacing": "0"
+            },
+            ".mbr-shop .mbr-gallery-filter": {
+              "padding-left": "0",
+              "text-align": "left",
+              "padding-top": "0"
+            },
+            ".mbr-shop .mbr-gallery-filter ul li": {
+              "position": "relative",
+              "padding": "10px 0 10px 0px",
+              "border-bottom": "1px solid rgba(0, 0, 0, 0.07)",
+              "margin": "0",
+              "font-style": "normal",
+              "font-weight": "400",
+              "line-height": "24.99px",
+              "text-transform": "none",
+              "letter-spacing": "0px",
+              "word-spacing": "0",
+              "direction": "ltr",
+              "display": "list-item",
+              "text-align": "left",
+              "-webkit-transition": "all 0.3s ease-out",
+              "transition": "all 0.3s ease-out",
+              "cursor": "pointer"
+            },
+            ".mbr-shop .mbr-gallery-filter ul li.active": {
+              "background-color": "transparent",
+              "font-weight": "bold"
+            },
+            ".mbr-shop .mbr-gallery-filter ul li:hover": {
+              "background-color": "transparent"
+            },
+            ".mbr-shop .range-slider": {
+              "padding-bottom": "25px"
+            },
+            ".mbr-shop .filter-cost": {
+              "display": "block",
+              "vertical-align": "middle",
+              "max-width": "250px",
+              "text-align": "left",
+              "position": "relative",
+              "margin-bottom": "30px"
+            },
+            ".mbr-shop .filter-cost p": {
+              "margin-bottom": "10px",
+              "font-size": "16px",
+              "line-height": "21px",
+              "color": "#666666",
+              "font-weight": "bold"
+            },
+            ".mbr-shop .price-controls": {
+              "position": "relative",
+              "height": "36px",
+              "margin-bottom": "30px",
+              "border": "2px solid #666666",
+              "border-radius": "2px",
+              "font-size": "0"
+            },
+            ".mbr-shop .price-controls label": {
+              "display": "inline-block",
+              "width": "50%",
+              "font-size": "14px",
+              "line-height": "32px",
+              "color": "#666666",
+              "font-weight": "normal",
+              "cursor": "pointer",
+              "margin-bottom": "0"
+            },
+            ".mbr-shop .price-controls label.min-price": {
+              "border-right": "2px solid #666666"
+            },
+            ".mbr-shop .price-controls input": {
+              "width": "100%",
+              "background-color": "#ffffff",
+              "border": "none",
+              "line-height": "31px",
+              "height": "31px",
+              "text-align": "center",
+              "-webkit-user-select": "none",
+              "-ms-user-select": "none",
+              "-moz-user-select": "none",
+              "user-select": "none"
+            },
+            ".mbr-shop .range-controls": {
+              "position": "relative"
+            },
+            ".mbr-shop .range-controls .scale": {
+              "width": "100%",
+              "height": "2px",
+              "background-color": "rgba(190, 190, 190, 0.3)"
+            },
+            ".mbr-shop .range-controls .bar": {
+              "margin-left": "0",
+              "width": "100%",
+              "height": "2px",
+              "background-color": "#666666"
+            },
+            ".mbr-shop .toggle": {
+              "position": "absolute",
+              "top": "-9px",
+              "width": "4px",
+              "height": "4px",
+              "border": "8px solid #666666",
+              "border-radius": "100%",
+              "box-sizing": "content-box",
+              "background-color": "#ababab",
+              "cursor": "pointer"
+            },
+            ".mbr-shop .toggle:hover, .mbr-shop .toggle:active": {
+              "background-color": "#c0a375"
+            },
+            ".mbr-shop .min-toggle": {
+              "left": "0"
+            },
+            ".mbr-shop .max-toggle": {
+              "right": "0"
+            },
+            ".mbr-shop .hided-by-price": {
+              "display": "none"
+            },
+            ".mbr-shop .text-modal": {
+              "padding-right": "30px",
+              "padding-left": "30px"
+            },
+            ".mbr-shop .text-modal .item-button": {
+              "text-align": "left !important"
+            },
+            ".mbr-shop .text-modal .price-block": {
+              "line-height": "1",
+              "border-bottom": "1px dotted #d6d6d6"
+            },
+            ".mbr-shop .text-modal .price-block p": {
+              "display": "inline"
+            },
+            ".mbr-shop .text-modal .price-block span": {
+              "display": "inline",
+              "font-weight": "700",
+              "padding": "10px 0 20px 0"
+            },
+            ".mbr-shop .text-modal .card-description": {
+              "padding-top": "20px",
+              "display": "block",
+              "font-size": "16px",
+              "line-height": "24px",
+              "margin-bottom": "50px"
+            },
+            ".mbr-shop .modal-control-panel": {
+              "padding-right": "0"
+            },
+            ".mbr-shop .modal-cb": {
+              "display": "inline-block",
+              "float": "right",
+              "margin-right": "10px",
+              "margin-left": "10px"
+            },
+            ".mbr-shop .shopItemsModalBg": {
+              "width": "100%",
+              "height": "100%"
+            },
+            ".mbr-shop .close-modal-wrapper": {
+              "cursor": "pointer",
+              "width": "40px",
+              "height": "40px",
+              "position": "absolute",
+              "top": "0",
+              "right": "0"
+            },
+            ".mbr-shop .close-modal-wrapper:after": {
+              "content": "''",
+              "position": "absolute",
+              "width": "40px",
+              "height": "3px",
+              "background-color": "#cccccc",
+              "top": "50%",
+              "right": "5%",
+              "-webkit-transform": "rotate(-45deg)",
+              "transform": "rotate(-45deg)"
+            },
+            ".mbr-shop .close-modal-wrapper:before": {
+              "content": "''",
+              "position": "absolute",
+              "width": "3px",
+              "height": "40px",
+              "background-color": "#cccccc",
+              "right": "50%",
+              "top": "5%",
+              "-webkit-transform": "rotate(-45deg)",
+              "transform": "rotate(-45deg)"
+            },
+            ".mbr-shop .closeModal": {
+              "position": "absolute",
+              "top": "10px",
+              "right": "10px"
+            },
+            ".mbr-shop .galleryItem .sidebar_wraper": {
+              "text-align": "center"
+            },
+            ".mbr-shop .shopItemsModal .sidebar_wraper": {
+              "text-align": "left"
+            },
+            ".mbr-shop .shopItemsModal .onsale": {
+              "top": "10px",
+              "right": "10px",
+              "border": "1px solid #e7e7e7"
+            },
+            ".mbr-shop .shop-items .onsale, .mbr-shop .bestseller-block .onsale": {
+              "font-size": "15px !important"
+            },
+            ".mbr-shop .item_overlay": {
+              "position": "absolute",
+              "width": "100%",
+              "height": "100%",
+              "z-index": "99",
+              "background": "transparent"
+            },
+            ".mbr-shop .style_overlay": {
+              "position": "absolute",
+              "width": "100%",
+              "height": "100%"
+            },
+            ".mbr-shop .price-range": {
+              "display": "inline-block"
+            },
+            ".mbr-shop .price-range-reset": {
+              "display": "inline-block"
+            },
+            ".mbr-shop .bestsellers .item-button": {
+              "display": "none !important"
+            },
+            ".mbr-shop .range-slider h4": {
+              "margin-bottom": "15px"
+            },
+            ".mbr-shop .mbr-gallery-filter ul": {
+              "padding-left": "0px",
+              "display": "inline-block",
+              "list-style": "none",
+              "margin-bottom": "0px"
+            },
+            ".mbr-shop .categories:after": {
+              "content": "''",
+              "display": "table",
+              "clear": "both"
+            },
+            "@media (min-width: 767px) and (max-width: 1100px)": {
+              ".mbr-shop .col-md-9": {
+                "width": "100%"
+              },
+              ".mbr-shop .col-md-3": {
+                "width": "100%"
+              },
+              ".mbr-shop .sidebar-background:after": {
+                "top": "0"
+              },
+              ".mbr-shop .bestseller-block": {
+                "width": "100%",
+                "margin": "0",
+                "display": "inline-block",
+                "float": "left",
+                "padding-top": "15px"
+              },
+              ".mbr-shop .range-slider": {
+                "width": "49%",
+                "margin": "0",
+                "display": "inline-block",
+                "float": "right",
+                "padding-top": "15px"
+              },
+              ".mbr-shop .bestsellers": {
+                "width": "100%"
+              },
+              ".mbr-shop .bestsellers .mbr-gallery-item": {
+                "width": "49%",
+                "display": "inline-block"
+              },
+              ".mbr-shop .sidebar-categories": {
+                "width": "49%",
+                "margin": "0",
+                "display": "inline-block",
+                "padding-top": "15px"
+              },
+              ".mbr-shop .price-range": {
+                "max-width": "250px",
+                "text-align": "center"
+              },
+              ".clearfix:after": {
+                "content": "''",
+                "display": "table",
+                "clear": "both"
+              }
+            },
+            "@media (max-width: 991px) and (min-width: 768px)": {
+              ".mbr-shop .mbr-gallery-item": {
+                "width": "50%"
+              },
+              ".mbr-shop__row": {
+                "padding": "0"
+              }
+            },
+            "@media (max-width: 500px)": {
+              ".mbr-shop .shopItemsModal": {
+                "padding": "50px 10px 10px 10px"
+              },
+              ".mbr-shop .shop-title": {
+                "max-width": "100%"
+              },
+              ".mbr-shop .mbr-gallery-item": {
+                "width": "100%"
+              }
+            },
+            "@media (max-width: 1200px)": {
+              ".mbr-shop .sort-buttons": {
+                "text-align": "center",
+                "margin-right": "0 !important"
+              },
+              ".wrapper-shop-items": {
+                "-webkit-box-ordinal-group": "2",
+                "order": "1"
+              },
+              ".mbr-shop .sidebar": {
+                "margin-bottom": "30px",
+                "margin-top": "0"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".mbr-shop .image-modal": {
+                "text-align": "center"
+              },
+              ".wrapper-shop-items, .mbr-shop__row": {
+                "padding": "0"
+              },
+              ".mbr-shop .image-modal img": {
+                "max-height": "50vh",
+                "width": "auto",
+                "max-width": "100%"
+              },
+              ".mbr-shop .shopItemsModal": {
+                "top": "15%",
+                "bottom": "70px",
+                "left": "10%",
+                "width": "80%"
+              },
+              ".mbr-shop .shopItemsModal .image-modal": {
+                "padding-right": "0"
+              },
+              ".mbr-shop .sidebar-background:after": {
+                "top": "-1%"
+              }
+            },
+            "@media (max-width: 1100px)": {
+              ".mbr-shop .shopItemsModal": {
+                "max-height": "85vh",
+                "width": "90%",
+                "left": "5%",
+                "margin-left": "0"
+              },
+              ".mbr-shop .sort-buttons": {
+                "margin-right": "21px"
+              },
+              ".mbr-shop .sidebar-background:after": {
+                "right": "0",
+                "width": "100%"
+              },
+              ".mbr-shop .text-modal .card-description": {
+                "width": "100%"
+              },
+              ".mbr-shop .text-modal .price-block": {
+                "width": "100%"
+              },
+              ".mbr-shop .text-modal h4": {
+                "padding-top": "30px"
+              }
+            },
+            ".shopItemsModal_wraper .mbr-section-btn": {
+              "display": "none"
+            },
+            ".range-slider .mbr-section-btn": {
+              "margin": "0"
+            },
+            ".oldprice": {
+              "color": "#767676",
+              "padding-left": "0.8rem",
+              "text-decoration": "line-through"
+            },
+            "& when (@shop__showPriceRange)": {
+              ".range-controls": {
+                "display": "block !important"
+              }
+            },
+            "& when (@shop__showSortButtons)": {
+              ".sort-buttons": {
+                "display": "block !important"
+              }
+            },
+            "@media screen and (~'-ms-high-contrast: active'), (~'-ms-high-contrast: none')": {
+              ".shopItemsModal.row": {
+                "position": "absolute !important",
+                "top": "calc(50% ~'-' 300px) !important",
+                "left": "calc(50% ~'-' 500px) !important"
+              }
+            }
+          },
+          "_name": "shop1",
+          "_sourceTheme": "petsm4",
+          "_customHTML": "<section class=\"mbr-gallery shop1 petsm4_shop1\" group=\"Shops\" plugins=\"mobirise-shop,Gallery\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t\t<input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n\t\t<input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"9\" inline>\n\t\t<input type=\"color\" title=\"On Sale Bg\" name=\"saleBg\" value=\"#ffffff\">\n\t\t<input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\t\t<input type=\"shop\" title=\"Shop\" name=\"shop\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div mbr-class=\"{'container': !fullWidth}\">\n\t\t<div mbr-shop=\"shop\" class=\"mbr-shop\" show-sidebar card-buttons></div>\n\t</div>\n\n</section>",
+          "_cid": "sOk72iX2MQ",
+          "_protectedParams": [
+            "shop__showSidebar",
+            "shop__reverseSidebar",
+            "shop__showSortButtons",
+            "shop__showBestSellers",
+            "shop__showPriceRange",
+            "shop__showTags",
+            "text_all",
+            "sidebar1",
+            "sidebar2",
+            "sidebar3",
+            "shop__filtersTextStyle",
+            "buttons_default_class",
+            "filter_by_d",
+            "filter_by_pu",
+            "filter_by_pd",
+            "price_range",
+            "price_range_reset",
+            "shop"
+          ],
+          "_global": false,
+          "_once": false,
+          "_params": {
+            "shop__showSidebar": false,
+            "shop__reverseSidebar": true,
+            "shop__showSortButtons": false,
+            "shop__showBestSellers": true,
+            "shop__showPriceRange": true,
+            "shop__showTags": true,
+            "text_all": "All",
+            "sidebar1": "Best Sellers",
+            "sidebar2": "Price Range",
+            "sidebar3": "Filter",
+            "shop__filtersTextStyle": "display-7",
+            "filter_by_d": "<a class=\"btn btn-sm btn-primary disableSortButton\" href=\"\">Default sorting</a>",
+            "filter_by_pu": "<a class=\"btn btn-sm btn-primary-outline disableSortButton\" href=\"\">Price: low to high</a>",
+            "filter_by_pd": "<a class=\"btn btn-sm btn-primary-outline disableSortButton\" href=\"\">Price: high to low</a>",
+            "price_range": "<a class=\"btn btn-sm btn-primary\" data-app-btn=\"true\" href=\"\">Filter</a>",
+            "price_range_reset": "<a class=\"btn btn-sm btn-secondary\" data-app-btn=\"true\" href=\"\">Show all</a>",
+            "shop": [
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Yerba Mate Verde Flor",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$164",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040349-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040349-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": ""
+              },
+              {
+                "tags": "Wonderful",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Azucar de Coco",
+                "itemDescription": "<br><br>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$60",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040352-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040352-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "<p>Jaraba de Agabe</p>",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$136",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040363-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040363-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": ""
+              },
+              {
+                "tags": "Responsive",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "<p>Leche de coco</p>",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$102",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040372-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040372-2000x2997-800x808.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": ""
+              },
+              {
+                "tags": "Creative",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Yerba Mate Mapuche",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$104",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040374-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040374-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": ""
+              },
+              {
+                "tags": "Animated",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Leche en Polvo Descremada",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$52",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040375-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040375-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "<p>Alulosa</p>",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040382-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040382-2000x2997-800x741.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "<p>Avena Machacada</p>",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040385-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040385-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "<p>Cereal Muesli</p>",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040387-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040387-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "<p>Mantequilla de Maní</p>",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040393-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040393-2000x2997-800x977.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "<p>Hiernas Palo Negro</p>",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040396-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040396-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Alpiste Yalisto",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040404-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040404-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Health Natural",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040408-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040408-2000x2997-800x796.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Té Matcha",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040410-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040410-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Hierbas Karun life",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040413-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040413-2000x2997-800x743.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Chocolates Naturales",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040427-2000x1334.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040427-2000x1334-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Chocolates altos en cacao",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040433-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040433-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Sesamo",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040454-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040454-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Linaza",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040457-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040457-2000x2997-800x814.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Nueces",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040463-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040463-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Castañas de la india",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040467-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040467-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Aceites de oliva",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040471-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040471-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Vinagres de Manzana",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040475-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040475-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Miel de abejas",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040480-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040480-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Aloe Vera",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040483-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040483-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Aceíte de coco",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040487-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040487-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Matico",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040490-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040490-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Jabones Caracobel",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040491-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040491-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Avenas",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040496-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040496-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Canelas",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040501-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040501-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Canelas",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040505-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040505-2000x2997-800x794.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Cereales",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040505-1-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040505-1-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Maqui",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040507-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040507-2000x2997-800x1097.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Proteina Vegetal",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040511-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040511-2000x2997-800x794.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Yacón",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040513-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040513-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Chia",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040518-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040518-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Quinoa",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040522-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040522-2000x2997-800x756.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Harina de Almendras",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040527-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040527-2000x2997-800x768.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Cacao",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040530-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040530-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Jenjibre en Polvo",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040534-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040534-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Azucares",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040537-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040537-2000x2997-800x794.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Maca",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040538-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040538-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Productos SoyMilke",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040542-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040542-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "aceite de Sacha Inchi",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040545-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040545-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Mantequilla de Almendras",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040547-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040547-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Mantequilla de Coco",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040549-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040549-2000x2997-800x800.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Té de Inflamaciones",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040551-2000x1334.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040551-2000x1334-800x534.jpg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Awesome",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Alimenta de Soya",
+                "itemDescription": "",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$34",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040554-2000x2997.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040554-2000x2997-800x970.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": false,
+                "alt": "",
+                "title": ""
+              },
+              {
+                "tags": "Wonderful",
+                "bestSeller": false,
+                "onSale": false,
+                "oldPrice": false,
+                "itemTitle": "Prebiotico de Insulina",
+                "itemDescription": "<br><br>",
+                "itemPriceTitle": "From: ",
+                "itemPrice": "",
+                "oldPriceValue": "$60",
+                "sale": "-50%",
+                "button": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\" class=\"btn btn-primary display-7\">Buy now!</a>",
+                "image": "@PROJECT_PATH@/assets/images/p1040355-1-2000x1334.jpeg",
+                "thumb": "@PROJECT_PATH@/assets/images/p1040355-1-2000x1334-800x948.jpeg",
+                "customStyle5": "display-5",
+                "customStyle7": "display-7",
+                "customStyleSale": "display-7",
+                "customStyleTags": "display-4",
+                "caption": "Type caption here",
+                "active": true,
+                "alt": "",
+                "title": ""
+              }
+            ]
+          },
+          "_anchor": "shop1-2",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": []
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            ".mbr-overlay": {
+              "background-color": "@overlayColor",
+              "opacity": "@overlayOpacity"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "img": {
+              "width": "40px",
+              "height": "40px",
+              "margin-right": "0.8rem"
+            },
+            "h3": {
+              "margin": "0"
+            },
+            ".btn": {
+              "width": "100%",
+              "border-radius": "30px",
+              "border-top-right-radius": "0",
+              "padding": "0.4rem 1rem"
+            },
+            ".icons-wrap": {
+              "display": "flex",
+              "align-items": "center"
+            },
+            ".text-wrap": {
+              "width": "100%"
+            },
+            ".item-wrap": {
+              "display": "inline-block",
+              "width": "fit-content"
+            },
+            ".socicon-wrap": {
+              "width": "fit-content",
+              "display": "flex",
+              "margin-bottom": "0.8rem",
+              ".mbr-iconfont": {
+                "font-size": "1.2rem",
+                "color": "@iconColor !important",
+                "background": "@iconColor2",
+                "padding": "10px",
+                "margin-right": "0.6rem",
+                "border": "2px solid @iconColor2",
+                "height": "40px",
+                "display": "flex",
+                "width": "40px",
+                "justify-content": "center",
+                "align-items": "center",
+                "transition": "all 0.3s",
+                "border-radius": "100%",
+                "&:hover": {
+                  "background": "@iconColor",
+                  "color": "@iconColor2 !important",
+                  "border": "2px solid @iconColor2"
+                }
+              },
+              "p": {
+                "margin-bottom": "0.2rem"
+              }
+            },
+            ".jq-selectbox__dropdown, ul": {
+              "border-radius": "20px!important"
+            },
+            ".jq-selectbox": {
+              "border-radius": "30px"
+            },
+            ".jq-selectbox__select": {
+              "padding": "1.2rem 1.5rem"
+            },
+            ".jq-selectbox li": {
+              "padding": "1.2rem 1.5rem"
+            },
+            "input, textarea, .select": {
+              "border-radius": "30px"
+            },
+            "input, textarea": {
+              "padding": "1rem 2rem"
+            },
+            "textarea": {
+              "min-height": "10rem"
+            },
+            "& when (@customStyle)": {
+              ".form-control, .field-input": {
+                "padding": "1rem 1.5rem",
+                "background-color": "@fieldColor",
+                "border-color": "@borderColor",
+                "color": "@formText",
+                "transition": "0.4s",
+                "box-shadow": "none",
+                "outline": "none",
+                "&::-webkit-input-placeholder, &::-webkit-input-placeholder": {
+                  "color": "@formPlaceholder"
+                },
+                "&:-moz-placeholder, &:-moz-placeholder": {
+                  "color": "@formPlaceholder"
+                },
+                "&:hover, &:focus": {
+                  "background-color": "@fieldHover",
+                  "border-color": "@borderHover",
+                  "color": "@formFocusText",
+                  "box-shadow": "none",
+                  "outline": "none",
+                  "&::-webkit-input-placeholder, &::-webkit-input-placeholder": {
+                    "color": "@formFocusPlaceholder"
+                  },
+                  "&:-moz-placeholder, &:-moz-placeholder": {
+                    "color": "@formFocusPlaceholder"
+                  }
+                }
+              },
+              ".jq-number__spin:hover, .jq-number__spin:focus": {
+                "background-color": "@fieldHover",
+                "border-color": "@borderHover",
+                "color": "contrast(@formText, #000000, #ffffff, 30%)",
+                "box-shadow": "none",
+                "outline": "none"
+              },
+              ".jq-number__spin": {
+                "background-color": "@fieldColor",
+                "border-color": "@borderColor",
+                "color": "@formText",
+                "transition": "0.4s",
+                "box-shadow": "none",
+                "outline": "none"
+              },
+              ".jq-selectbox li, .jq-selectbox li": {
+                "background-color": "@fieldColor",
+                "color": "contrast(@fieldColor, #000000, #ffffff, 30%)"
+              },
+              ".jq-selectbox li:hover, .jq-selectbox li.selected": {
+                "background-color": "@fieldHover",
+                "color": "contrast(@fieldHover, #000000, #ffffff, 30%)"
+              },
+              ".jq-selectbox:hover .jq-selectbox__trigger-arrow, .jq-number__spin.minus:hover:after, .jq-number__spin.plus:hover:after": {
+                "border-top-color": "@fieldColor",
+                "border-bottom-color": "@fieldColor"
+              },
+              ".jq-selectbox .jq-selectbox__trigger-arrow, .jq-number__spin.minus:after, .jq-number__spin.plus:after": {
+                "border-top-color": "@fieldHover",
+                "border-bottom-color": "@fieldHover"
+              }
+            },
+            "& when (@customStyle), (@disableElements)": {
+              "input::-webkit-clear-button": {
+                "display": "none"
+              },
+              "input::-webkit-inner-spin-button": {
+                "display": "none"
+              },
+              "input::-webkit-outer-spin-button": {
+                "display": "none"
+              },
+              "input::-webkit-calendar-picker-indicator": {
+                "display": "none"
+              }
+            },
+            ".col-md-6": {
+              "margin-bottom": "2rem"
+            },
+            ".form-group": {
+              "margin-bottom": "0.4rem"
+            },
+            ".form-control": {
+              "min-height": "2em",
+              "font-size": "1rem",
+              "text-align": "center"
+            },
+            ".title1": {
+              "margin": "0"
+            },
+            ".align-wrap": {
+              "display": "block"
+            },
+            ".mbr-iconfont": {
+              "font-size": "1.2rem",
+              "color": "@iconColor3 !important",
+              "padding-right": "1rem"
+            },
+            "@media (max-width: 767px)": {
+              "form": {
+                "padding": "0"
+              },
+              ".socicon-wrap": {
+                "margin": "auto"
+              }
+            },
+            ".title": {
+              "color": "#ed6436"
+            }
+          },
+          "_name": "footer2",
+          "_sourceTheme": "petsm4",
+          "_customHTML": "<section class=\"form\" group=\"Form\" plugins=\"formstyler, datepicker\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <header>Style</header>\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconColor3\" value=\"#181818\" selected>\n        <input type=\"color\" title=\"Soc Icons Color\" name=\"iconColor\" value=\"#ffffff\" selected>\n        <input type=\"color\" title=\"Soc Icons BG\" name=\"iconColor2\" value=\"#ed6436\" selected>\n        <input type=\"range\" inline title=\"Icons\" name=\"icons\" min=\"0\" max=\"4\" step=\"1\" value=\"1\">\n\n\n        <select title=\"Items\" name=\"items\">\n            <option value=\"1\" selected>1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n        </select>\n        <select title=\"Links\" name=\"links\">\n            <option value=\"1\" selected>1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n        </select>\n        <input type=\"checkbox\" name=\"customStyle\" title=\"Custom Style\">\n        <input type=\"checkbox\" name=\"disableElements\" title=\"Disable Control\">\n        <input type=\"color\" name=\"fieldColor\" title=\"Field\" value=\"#ffffff\" condition=\"customStyle\">\n        <input type=\"color\" name=\"fieldHover\" title=\"Field Hover\" value=\"#ffffff\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderColor\" title=\"Border\" value=\"#cccccc\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderHover\" title=\"Border Hover\" value=\"#ed6436\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formText\" title=\"Text\" value=\"#181818\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formFocusText\" title=\"Text Focus\" value=\"#181818\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formPlaceholder\" title=\"Placeholders\" value=\"#383838\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formFocusPlaceholder\" title=\"Placeholders Focus\" value=\"#383838\" condition=\"customStyle\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"(overlay && bg.type=='image')\"></div>\n    <div class=\"container\">\n        <div class=\"row\">\n\n\n            <div class=\"col-md-6 title-col align-left col-lg-3\">\n\n                <div class=\"item-wrap pb-4\">\n                    <div class=\"icons-wrap\">\n                        <img src=\"@PROJECT_PATH@/assets/images/logo-pandy-80x58.png\" alt=\"Mobirise\" mbr-if=\"showLogo\">\n                        <h2 class=\"title1 align-left p-0 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".title1, .title-col\">Pandy<br>Productos Naturales<br><br></h2>\n                    </div>\n                </div>\n                <div class=\"socicon-wrap\">\n                    <span mbr-icon class=\"mbr-iconfont socicon-facebook socicon\" mbr-if=\"icons > 0\"></span>\n                    <span mbr-icon class=\"mbr-iconfont socicon-instagram socicon\" mbr-if=\"icons > 1\"></span>\n                    <span mbr-icon class=\"mbr-iconfont socicon-youtube socicon\" mbr-if=\"icons > 2\"></span>\n                    <span mbr-icon class=\"mbr-iconfont socicon-instagram socicon\" mbr-if=\"icons > 3\"></span>\n                </div>\n\n\n            </div>\n\n\n            <div class=\"col-md-6 col-lg-3\">\n\n                <h2 class=\"title align-left mbr-bold pb-2 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".title\">Donde encontrarnos</h2>\n\n                <div class=\"align-wrap align-left\" mbr-if=\"items > 0\">\n\n                    <div class=\"item-wrap\">\n                        <div class=\"icons-wrap pb-2\">\n                            <span mbr-icon class=\"mbr-iconfont mobi-mbri-globe-2 mobi-mbri\"></span>\n                            <h3 class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">Marmol 2558, Compañías Alta, La Serena</h3>\n                        </div>\n                    </div>\n\n                    <div class=\"item-wrap\">\n                        <div class=\"icons-wrap pb-2\" mbr-if=\"items > 1\">\n\n                            <span mbr-icon class=\"mbr-iconfont mbrib-key\"></span>\n\n                            <h3 class=\"icon-title align-left mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">+2342 5446 67</h3>\n\n\n                        </div>\n\n                    </div>\n                    <div class=\"item-wrap\">\n                        <div class=\"icons-wrap pb-2\" mbr-if=\"items > 2\">\n\n                            <span mbr-icon class=\"mbr-iconfont mbrib-pin\"></span>\n\n                            <h3 class=\"icon-title align-left mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">Mon - Sun: 8AM - 8PM</h3>\n\n                        </div>\n\n\n                    </div>\n                </div>\n\n            </div>\n\n\n            <div class=\"col-md-6 col-lg-3\">\n\n\n                <h2 class=\"title mbr-bold align-left pb-2 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".title\">Urgencias</h2>\n\n                <h3 class=\"links-title align-left pb-2 mbr-regular mbr-fonts-style\" mbr-if=\"links > 0\" mbr-theme-style=\"display-4\" data-app-selector=\".links-title\">Llamanos! +56987280921</h3>\n\n                <h3 class=\"links-title align-left pb-2 mbr-regular mbr-fonts-style\" mbr-if=\"links > 1\" mbr-theme-style=\"display-4\" data-app-selector=\".links-title\">Cat Boarding Services</h3>\n\n                <h3 class=\"links-title align-left pb-2 mbr-regular mbr-fonts-style\" mbr-if=\"links > 2\" mbr-theme-style=\"display-4\" data-app-selector=\".links-title\">Spa and Grooming Services</h3>\n\n\n\n\n\n            </div>\n\n\n\n\n            \n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "footer2-1",
+          "_isUserblock": true,
+          "_cid": "sOk6XbWjJA",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
