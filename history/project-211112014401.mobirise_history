@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "index.html",
+    "currentPage": "nuestrosproductos.html",
     "theme": {
       "name": "petsm4",
       "title": "PetsM4",
@@ -69,7 +69,9 @@
     "uniqCompNum": 10,
     "versionPublish": "5.4.1",
     "screenshot": "screenshot.png",
-    "robotsText": "User-agent: *\nDisallow: /cgi-bin\n"
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\n",
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@"
   },
   "pages": {
     "index.html": {
