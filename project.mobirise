@@ -58,8 +58,8 @@
       "zIndex": 10,
       "enabled": true
     },
-    "favicon": "@PROJECT_PATH@/assets/images/logo-pandy-128x92.png",
-    "mbrsiteDomain": "qimoysokqi",
+    "favicon": false,
+    "mbrsiteDomain": "aunp7uuk4o",
     "robotsSwitcher": true,
     "sitemapSwitcher": true,
     "sitemapSwitcherAuto": "on",
@@ -69,7 +69,9 @@
     "uniqCompNum": 10,
     "versionPublish": "5.4.1",
     "screenshot": "screenshot.png",
-    "robotsText": "User-agent: *\nDisallow: /cgi-bin\n"
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\n",
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@"
   },
   "pages": {
     "index.html": {
